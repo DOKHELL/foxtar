@@ -1,0 +1,50 @@
+@import "vars";
+.all-items{
+    background-color: $allfon;
+}
+.breadcrumbs{
+    padding: 45px 0px 40px;
+}
+.breadcrumbs__item{
+    display: inline-block;
+    position: relative;
+        a{
+            line-height: 40px;
+            color: #b0bec5;
+        }
+        span{
+            color: $fon;
+        }
+        & + .breadcrumbs__item{
+            padding-left: 24px;
+            &:before{
+                content: "";
+                position: absolute;
+                background-color: $green;
+                width: 5px;
+                height: 1px;
+                left: 8px;
+                top: 50%;
+            }
+        }
+}
+.pagination__item{
+    display: inline-block;
+    &+.pagination__item{
+        padding-left: 7px;
+    }
+    a{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: $fon;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #fff;
+    }
+    .active{
+        background-color: $red;
+        color: #fff;
+    }
+}
