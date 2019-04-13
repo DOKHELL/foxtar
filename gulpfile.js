@@ -33,7 +33,8 @@ gulp.task('scripts', function() {
 		'node_modules/jquery/dist/jquery.js', // Берем jQuery
 		'node_modules/slick-carousel/slick/slick.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-		'node_modules/mixitup/dist/mixitup.js'
+		'node_modules/mixitup/dist/mixitup.js',
+		'node_modules/ion-rangeslider/js/ion.rangeSlider.js'
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(uglify()) // Сжимаем JS файл
@@ -105,5 +106,5 @@ gulp.task('watch', function() {
 	gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('default', gulp.parallel('css-libs', 'scss', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel( 'scss', 'scripts', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'scss', 'scripts'));

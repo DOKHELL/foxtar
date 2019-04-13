@@ -1,0 +1,213 @@
+@import "vars";
+.all-items{
+    background-color: $allfon;
+    padding-bottom: 100px;
+}
+.breadcrumbs{
+    padding: 45px 0px 40px;
+}
+.breadcrumbs__list{
+    font-size: 0;
+}
+.breadcrumbs__item{
+    display: inline-block;
+    font-size: 15px;
+    position: relative;
+        a{
+            line-height: 40px;
+            color: #b0bec5;
+        }
+        span{
+            color: $fon;
+        }
+        & + .breadcrumbs__item{
+            padding-left: 24px;
+            &:before{
+                content: "";
+                position: absolute;
+                background-color: $green;
+                width: 5px;
+                height: 1px;
+                left: 8px;
+                top: 50%;
+            }
+        }
+}
+.pagination__list{
+    font-size: 0;
+}
+.pagination__item{
+    display: inline-block;
+    &+.pagination__item{
+        padding-left: 7px;
+    }
+    a{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: $fon;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #fff;
+    }
+    .active{
+        background-color: $red;
+        color: #fff;
+    }
+}
+.categories,.price-range,.top-sellers{
+    border: 1px solid $border;
+    background-color: #fff;
+    padding: 0px 30px 20px;
+    margin-bottom: 30px;
+}
+.categories__title,.price-range__title,.top-sellers__title{
+    font-size: 20px;
+    line-height: 60px;
+    color: $fon;
+    font-weight: 700;
+    border-bottom: 1px solid $border;
+    margin-bottom: 10px;
+}
+.categories__item{
+    a{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px;
+    }
+}
+.categories__name{
+    color: $fon;
+    position: relative;
+    padding-left: 20px;
+        &:before{
+            content: "\f105";
+            font-family: "icomoon";
+            position: absolute;
+            left: 0;
+            color: $green;
+            font-size: 14px;
+        }
+}
+.categories__number{
+    color: $text;
+}
+
+.price-range__slider{
+    .irs--round .irs-bar{
+        background-color: $fon;
+    }
+    .irs--round .irs-line{
+        background-color: $border;
+    }
+    .irs--round .irs-handle{
+        width: 16px;
+        height: 16px;   
+        border-color: $green;
+        top: 30px;
+    }
+    .irs-from, .irs-to, .irs-single{
+        top: 50px;
+    }
+    .irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single{
+        font-size: 15px;
+        background-color: transparent;
+        color: #78909c;
+    }
+    .irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before{
+        display: none;
+    }
+    .irs-min,.irs-max{
+        display: none;
+    }
+}
+.price-range__btn,.top-sellers__btn{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border:none;
+    background-color: $green;
+    width: 100%;
+    padding: 5px 0;
+    outline: none;
+    line-height: 40px;
+    color: #fff;
+    text-align: center; 
+    font-weight: 500;
+        span{
+            position: relative;
+                &:before{
+                    content: "\f002";
+                    font-family: "icomoon";
+                    position: absolute;
+                    left: -24px;
+                    font-size: 15px;
+                }
+        }
+}
+.top-sellers__btn{
+    margin-top: 20px;
+}
+.top-sellers__item{
+    border-bottom: 1px solid $border;
+}
+.item__title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.item__name{
+    a{
+        color:$fon;
+        font-size: 16px;
+        font-weight: 700;
+            &+a{
+               color: $green;
+               font-weight: 500;
+               font-size: 14px;
+            }
+    }
+}
+.item__price{
+        color:$fon;
+        font-size: 16px;
+        font-weight: 700;
+        padding-top: 10px;
+}
+.item__title-description{
+    display: flex;
+    font-size: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+.stars{
+    color: #ffa726;
+    font-size: 12px;
+        li{
+            display: inline-block;
+        }
+}
+.item__title-description-name{
+    img,span{
+        vertical-align: middle;
+    }
+    span{
+        font-weight: 500;
+        font-size: 14px;
+        color: #546e7a;
+        padding-left: 10px;
+    }
+}
+.item{
+    img{
+        max-width: 100%;
+    }
+    .item__name{
+        max-width: 160px;
+    }
+}
+.top-sellers__item{
+    margin-top: 25px;
+}
