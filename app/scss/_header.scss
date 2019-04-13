@@ -80,6 +80,9 @@
 }
 .header__navigation{
     background-color: $fon;
+        ul{
+            font-size: 0;
+        }
         li{
             display: inline-block;
             &+li{
